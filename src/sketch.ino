@@ -27,8 +27,8 @@
 Adafruit_BMP085 bmp;
 Adafruit_BicolorMatrix matrix = Adafruit_BicolorMatrix();
 
-#define POLLING_INTERVAL_SEC 15ul
-#define MAX_HISTORY 20
+#define POLLING_INTERVAL_SEC 600ul
+#define MAX_HISTORY 12
 #define MATRIX_WIDTH 8
 #define MATRIX_HEIGHT 8
 #define GREEN_HEIGHT 5
