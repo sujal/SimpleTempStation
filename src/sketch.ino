@@ -27,7 +27,7 @@
 Adafruit_BMP085 bmp;
 Adafruit_BicolorMatrix matrix = Adafruit_BicolorMatrix();
 
-#define POLLING_INTERVAL_SEC 600ul
+#define POLLING_INTERVAL_SEC 15ul
 #define MAX_HISTORY 20
 #define MATRIX_WIDTH 8
 #define MATRIX_HEIGHT 8
@@ -228,7 +228,13 @@ void loop() {
             index-=MAX_HISTORY;
           }
           float thisFtemp = readingsHistory[index];
-          ble_write(thisFtemp);
+          char outbuf[4];
+          memcpy(outbuf, &thisFtemp, sizeof(thisFtemp));
+          ble_write(outbuf[0]);
+          ble_write(outbuf[1]);
+          ble_write(outbuf[2]);
+          ble_write(outbuf[3]);
+
         }
 
       }
