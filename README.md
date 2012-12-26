@@ -2,6 +2,8 @@
 
 A very simple Arduino project to hook up an iPhone to a [BMP085 Pressure/Temperature Sensor](https://www.adafruit.com/products/391).
 
+The iOS source code is [here](http://git.io/d0SrxQ).
+
 ## Building
 
 This project is set up as a ino project, so it includes dependent libraries and source code all in the project.
